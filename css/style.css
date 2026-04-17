@@ -1,0 +1,98 @@
+/* La importacion defuentesla ponemos arriba en el css */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/Dancing_Script/DancingScript-SemiBold.woff2') format('woff2'),
+        url('../fonts/Dancing_Script/DancingScript-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Selector universal para resetear valores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+/* Poner en tercer luga el root */
+:root {
+    --color-fondo_primario: #053617;
+    --color-texto_primario: rgb(255, 255, 255);
+
+    --breakpoint-principal: 1200px;
+
+}
+    /* --color-texto_primario: rgb(255, 255, 255, 0.5); con transparencia 50% */
+    /* --color-fondo_primario: #053617; */
+h1, h2 {
+    font-family: 'Dancing Script';
+}
+
+h1  {
+    position: absolute;
+    color: var(--color-texto_primario);
+    top: 8vw;
+    right: 6vw;
+    font-size: 10vw;
+
+    /* Para moviles en caso de pantalla menor de 450px */
+    @media (max-width: 450px) {
+        right: 14vw;
+        font-size: 15vw;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+nav {
+    background-color: var(--color-fondo_primario);
+
+    ul {
+        margin: 0 auto;
+        width: var(--breakpoint-principal);
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 0;
+
+        li {
+            list-style: none;
+            padding: .5rem 1rem;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            color: var(--color-texto_primario);
+
+               &:hover {
+                    /* border-top: 5px solid var(--color-texto_primario);
+                    border-bottom: 5px solid var(--color-texto_primario); */
+                    border-top: 5px solid yellow;
+                    border-bottom: 5px solid yellow;
+                    color: yellow;
+                }
+
+            a {
+                text-decoration: none;
+                /* color: var(--color-texto_primario); */
+                color: inherit;
+                font-size: 1.5rem; 
+            }
+               
+             
+        }
+     }
+}
+
+/* Esto se puede hacer tambien nav.ul */
+

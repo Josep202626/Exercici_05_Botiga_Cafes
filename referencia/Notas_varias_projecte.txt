@@ -1,0 +1,8 @@
+
+
+git remote add origin https://github.com/Josep202626/Exercici_05_Botiga_Cafes.git
+git branch -M main
+git push -u origin main
+
+
+
